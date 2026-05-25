@@ -1,18 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React , { useState } from 'react';
+import Navbar from './components/Navbar';
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    console.log(`Count changed to ${count}`);
-    // Do something here after the count state value changes
-  }, [count]);
-
-  return (
-    <div>
-      <p>Count: {count}</p>
-      <button onClick={() => setCount(count + 1)}>Increment Count</button>
-    </div>
-  );
+  return(
+  <div>
+    <Navbar/>
+    <p>Home component </p>
+  </div>
+);
 }
+
 export default App;
