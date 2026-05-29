@@ -6,21 +6,32 @@ function Navbar() {
             <h4>Todo List</h4>
         </div>
         <button className="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarNav" aria-controls="navbarNav"aria-expanded="false"
-            aria-label="Toggle navigation">
+data-target="#navbarNav" aria-controls="navbarNav"aria-expanded="false"
+           aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
         </button>
         <div
         className="collapse navbar-collapse mr-auto" id="navbarNav"  style={{ float: "left" }}>
             <ul className="navbar-nav ml-auto" style={{ color: "#ffffff" }}>
                 <li className="nav-item">
-                <NavLink to={"/"} className={({ isActive }) => 'nav-link ' + (isActive ? 'active' : '')}>
+                <NavLink to={"/"} className={ 'nav-link '+(status => status.isActive ? 'active' : '')}>
                     Home
                 </NavLink>
                 </li>
                 <li className="nav-item">
-               <NavLink to={"/aboutus"} className={({ isActive }) => 'nav-link ' + (isActive ? 'active' : '')}> Aboutus
-               </NavLink>
+               <NavLink to={"/aboutus"} className={ 'nav-link '+(status => status.isActive ? 'active' : '')}>
+         About us
+</NavLink>
+                </li>
+        <li className="nav-item">
+               <NavLink to={"/crud"} className={ 'nav-link '+(status => status.isActive ? 'active' : '')}>
+         Crud
+</NavLink>
+                </li>
+ <li className="nav-item">
+                <NavLink to={"/blog/posts"} className={ 'nav-link '+(status => status.isActive ? 'active' : '')}>
+                    blog
+                </NavLink>
                 </li>
             </ul>
         </div>
